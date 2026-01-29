@@ -1,0 +1,35 @@
+<div style="
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  width: 260px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+">
+
+  <div style="font-size:40px;">
+    📏
+  </div>
+
+  <h3 style="
+    margin: 5px 0 10px 0;
+    color: #b3e5fc;
+  ">
+    Distancia Ultrasónica
+  </h3>
+
+  <div style="
+    font-size: 38px;
+    font-weight: bold;
+    color: #4fc3f7;
+  ">
+    {{ value }} cm
+  </div>
+
+</div>
+
+  
+
+
