@@ -8,8 +8,8 @@
 #define DEVICE_CREDENTIAL "1234567"
 
 /* ========= WIFI ========= */
-#define SSID "JOU2022"
-#define SSID_PASSWORD "merchan2022"
+#define SSID "MECATRONICA_3ABC"
+#define SSID_PASSWORD "MEC2025@."
 
 /* ========= DHT11 ========= */
 #define DHTPIN 15
