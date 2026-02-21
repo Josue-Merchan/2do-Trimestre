@@ -3,8 +3,8 @@
 #include <SinricProSwitch.h>
 
 /* ===== CONFIGURACIÓN WIFI ===== */
-#define WIFI_SSID "JOU2022"
-#define WIFI_PASS "merchan2022"
+#define WIFI_SSID "MECATRONICA_3ABC"
+#define WIFI_PASS "MEC2025@."
 
 /* ===== CONFIGURACIÓN SINRIC ===== */
 const String APP_KEY = "1314b85e-7673-4a5b-8477-a24902647731";        // reemplaza con tu App Key de SinricPro
