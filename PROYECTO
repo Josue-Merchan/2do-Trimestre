@@ -1,0 +1,53 @@
+#include <WiFi.h>
+
+const char* ssid = "JOU2022";
+const char* password = "merchan2022";
+
+WiFiServer server(80);
+
+const int ledPin = 23;
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(ledPin, OUTPUT);
+  digitalWrite(ledPin, LOW);
+
+  WiFi.begin(ssid, password);
+  Serial.print("Conectando");
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println("\nConectado");
+  Serial.print("IP del ESP32: ");
+  Serial.println(WiFi.localIP());
+
+  server.begin();
+}
+
+void loop() {
+  WiFiClient client = server.available();
+
+  if (client) {
+    String request = client.readStringUntil('\r');
+    client.flush();
+
+    if (request.indexOf("GET /led/on") != -1) {
+      digitalWrite(ledPin, HIGH);
+      Serial.println("LED ON");
+    }
+
+    if (request.indexOf("GET /led/off") != -1) {
+      digitalWrite(ledPin, LOW);
+      Serial.println("LED OFF");
+    }
+
+    client.println("HTTP/1.1 200 OK");
+    client.println("Content-type:text/plain");
+    client.println();
+    client.println("OK");
+    client.stop();
+  }
+}
