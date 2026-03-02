@@ -5,8 +5,8 @@
 #define DEVICE_ID           "foco"
 #define DEVICE_CREDENTIAL   "20260026"
 
-#define SSID                "JOU2022"
-#define SSID_PASSWORD       "merchan2022"
+#define SSID                "MECATRONICA_3ABC"
+#define SSID_PASSWORD       "MEC2025@."
 
 // --- PINES ---
 #define RELAY_PIN           5  
